@@ -1,0 +1,20 @@
+body{
+    display: grid;
+    grid-template-areas:
+    "aside header"
+    "aside main";
+    grid-template-columns: auto 1fr;
+    /*o auto faz com que a primeira linha tenha a largura do side e o 1fr diz pra segunda coluna que ela tenha uma fração da largura do espaço que sobrou do grid container*/
+}
+/*cada grid-area vai alocar as tags no seu devido lugar na pgina. deve ser colocado na ordem em que os elementos aparecem no arquivo html*/
+.container{
+    grid-area: header;
+}
+
+.menu-lateral{
+    grid-area: aside;
+}
+
+.principal{
+    grid-area: main;
+}
