@@ -6,6 +6,14 @@
 .secao-horizontal{
     grid-template-rows: 120px auto;
 }
+
+.secao-horizontal .secao__cartoes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min(100%/2,max(348px,100%/3)),1fr));
+    /*MINMAX  é uma função do css que recebe como parâmetro um intervalo de valores, um mínimo e um máximo.
+    minmax(min, max) e cada um desses valores pode ter um mínimo e máximo, minmax(). No exemplo do AluraCast, o mínimo é 100/2, ou seja, a largura total no grid container e dividir por 2. O valor máximo também possui um valor mínimo e máximo, o mínimo é 348px e o máximo é 100% dividido por 3. Só vai dividir por 3 colunas quando os cartões tiverem espaço para ter 348px. O valor máximo será 1fr. nenhum cartão terá largura maior que 1fr, uma fração do container do grid */
+}
+
 .secao-vertical{
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr 2fr;
